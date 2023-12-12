@@ -232,4 +232,8 @@ singularity sign r4.3.2-seurat5.sif
 singularity push r4.3.2-seurat5.sif library://dyammons/r-env/r4.3.2-seurat5:v2
 ```
 
-
+This seemed to work:
+```sh
+singularity build --sandbox r4.3.2-seuratv5_v2 r4.3.2-seurat5.sif 
+singularity shell -B $PWD/../ --fakeroot r4.3.2-seuratv5_v2
+```
