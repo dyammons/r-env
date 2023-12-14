@@ -237,3 +237,8 @@ This seemed to work:
 singularity build --sandbox r4.3.2-seuratv5_v2 r4.3.2-seurat5.sif 
 singularity shell -B $PWD/../ --fakeroot r4.3.2-seuratv5_v2
 ```
+
+This appriach is likliy a better one, but the above also works, just is more clunky (this gave error... so def not the best way; need to figure out overlays)
+```sh
+singularity shell -B $PWD/../ --fakeroot --writable-tmpfs r4.3.2-seurat5.sif
+```
